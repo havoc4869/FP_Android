@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.example.android.futsalkuy.RincianFutsal">
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:orientation="vertical"
+      android:layout_height="match_parent">
+      <android.support.design.widget.AppBarLayout
+          android:layout_height="wrap_content"
+          android:layout_width="match_parent"
+          android:theme="@style/AppTheme">
+
+          <android.support.v7.widget.Toolbar
+              android:id="@+id/toolbar"
+              android:background="#4B8D7F"
+              android:layout_width="match_parent"
+              android:layout_height="?attr/actionBarSize"
+              app:popupTheme="@style/AppTheme.AppBarOverlay">
+              <RelativeLayout
+                  android:layout_width="match_parent"
+                  android:layout_height="match_parent">
+
+                  <ImageView
+                      android:id="@+id/imgBack"
+                      android:layout_width="50px"
+                      android:layout_centerVertical="true"
+                      android:layout_height="50px"
+                      android:background="@android:drawable/ic_menu_revert"/>
+                  <TextView
+                      android:layout_centerVertical="true"
+                      android:layout_width="wrap_content"
+                      android:layout_height="wrap_content"
+                      android:paddingLeft="24px"
+                      android:layout_toRightOf="@+id/imgBack"
+                      android:text="Telaga 1"
+                      android:textSize="24dp"
+                      android:textColor="@android:color/white"/>
+                  <ImageView
+                      android:layout_width="50px"
+                      android:layout_centerVertical="true"
+                      android:layout_height="50px"
+                      android:layout_alignParentRight="true"
+                      android:background="@drawable/hamburger"
+                      android:layout_marginRight="20dp"/>
+              </RelativeLayout>
+
+          </android.support.v7.widget.Toolbar>
+      </android.support.design.widget.AppBarLayout>
+      <ImageView
+          android:layout_width="match_parent"
+          android:layout_height="200dp"
+          android:layout_marginLeft="40dp"
+          android:layout_marginRight="40dp"
+          android:layout_marginBottom="20dp"
+          android:layout_marginTop="20dp"
+          android:scaleType="fitCenter"
+          android:background="@drawable/maptelaga1"/>
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:orientation="horizontal">
+
+          <LinearLayout
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingLeft="20dp"
+              android:layout_weight="1">
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:text="Telaga Futsal 1\n"
+                  android:textSize="20dp"
+                  android:textStyle="bold"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="16dp"
+                  android:text="Owner : Ahmad Jalaluddin\n"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="16dp"
+                  android:text="Address : Jl. Perumnas, Caturtunggal, Kec. Depok, Kabupaten Sleman, Daerah Istimewa Yogyakarta 55281"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="16dp"
+                  android:text="\nField : 5"/>
+              <TextView
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:textSize="16dp"
+                  android:text="\nContact : 08xxxxxxxxxx\n"/>
+              <Button
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:textSize="20dp"
+                  android:textColor="@android:color/white"
+                  android:background="#4B8D7F"
+                  android:text="Booking"
+                  android:layout_marginBottom="40dp"/>
+          </LinearLayout>
+          <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+              android:layout_weight="2">
+
+            <ImageView
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:background="@drawable/orang"
+                android:layout_alignParentRight="true"/>
+          </RelativeLayout>
+      </LinearLayout>
+
+
+  </LinearLayout>
+</android.support.v4.widget.NestedScrollView>
