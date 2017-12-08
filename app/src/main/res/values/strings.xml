@@ -1,5 +1,19 @@
 <resources>
     <string name="app_name">FutsalKuy</string>
+    <string-array name="planets_array">
+        <item>1 Hour</item>
+        <item>2 Hour</item>
+        <item>3 Hour</item>
+        <item>4 Hour</item>
+        <item>5 Hour</item>
+    </string-array>
+    <string-array name="planets_array2">
+        <item>Field 1</item>
+        <item>Field 2</item>
+        <item>Field 3</item>
+        <item>Field 4</item>
+        <item>Field 5</item>
+    </string-array>
     <string name="title_activity_register">Register</string>
 
     <string name="navigation_drawer_open">Open navigation drawer</string>
@@ -97,4 +111,6 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="title_activity_rincian_futsal">RincianFutsal</string>
+
+
 </resources>

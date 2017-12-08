@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.android.futsalkuy.MyAccount">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:background="#4B8D7F"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:popupTheme="@style/Theme.AppCompat.Light.NoActionBar">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:id="@+id/back"
+                    android:layout_width="80px"
+                    android:layout_centerVertical="true"
+                    android:layout_height="80px"
+                    android:background="@android:drawable/ic_menu_revert"/>
+                <TextView
+                    android:layout_centerVertical="true"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="24px"
+                    android:layout_toRightOf="@+id/back"
+                    android:text="My Account"
+                    android:textSize="24dp"
+                    android:textColor="@android:color/white"/>
+                <ImageView
+                    android:layout_width="80px"
+                    android:layout_centerVertical="true"
+                    android:layout_height="80px"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/hamburger"
+                    android:layout_marginRight="20dp"/>
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp">
+
+                <ImageView
+                    android:id="@+id/profil"
+                    android:background="@drawable/profil"
+                    android:layout_width="120dp"
+                    android:layout_height="120dp" />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingTop="24dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:paddingBottom="24dp">
+                <Button
+                    android:id="@+id/buton1"
+                    android:text="Ambil Foto"
+                    android:background="#4B8D7F"
+                    android:textColor="#ffffff"
+                    android:textSize="16dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+                <Button
+                    android:id="@+id/buton2"
+                    android:text="Pilih Foto"
+                    android:textColor="#ffffff"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="20dp"
+                    android:textSize="16dp"
+                    android:layout_marginTop="12dp"
+                    android:background="#4B8D7F"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp">
+            <EditText
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Full Name"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="ID"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Phone Number"/>
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="Email"/>
+            <Button
+                android:id="@+id/buton3"
+                android:text="Save"
+                android:background="#4B8D7F"
+                android:layout_marginTop="30dp"
+                android:textColor="#ffffff"
+                android:textSize="16dp"
+                android:layout_marginLeft="220dp"
+                android:layout_width="match_parent"
+                android:layout_height="40dp" />
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>
