@@ -10,18 +10,20 @@
         <activity
             android:name=".Login"
             android:screenOrientation="portrait"
-            android:theme="@style/Theme.AppCompat.NoActionBar" />
+            android:theme="@style/Theme.AppCompat.NoActionBar" >
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
+        </activity>
         <activity android:name=".Register" />
         <activity android:name=".MainMenu" />
         <activity android:name=".ListFutsal" />
         <activity
             android:name=".RincianFutsal"
             android:label="@string/title_activity_rincian_futsal">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity android:name=".AboutUs" />
         <activity android:name=".Booking" />
