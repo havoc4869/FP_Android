@@ -1,37 +1,89 @@
 package com.example.android.futsalkuy;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.os.AsyncTask;
+
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.io.OutputStream;
+import java.io.OutputStreamWriter;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.net.URLEncoder;
+
+import javax.net.ssl.HttpsURLConnection;
 
 /**
  * Created by febi on 09/12/2017.
  */
 
-public class BackgroundWorker extends AsyncTask<String,Void,Void> {
+public class BackgroundWorker extends AsyncTask<String,Void,String> {
     Context context;
+    AlertDialog alertDialog;
     BackgroundWorker (Context ctx){
         context = ctx;
 
     }
 
     @Override
-    protected Void doInBackground(String... params) {
+    protected String doInBackground(String... params) {
         String type = params[0];
-        String login_url = "http://lo";
+        String login_url = "http://localhost:82/S5/login.php";
         if(type.equals("login")){
+            try {
+                String username = params[1];
+                String password = params[2];
 
+                URL url = new URL(login_url);
+                HttpsURLConnection httpKoneksi = (HttpsURLConnection)url.openConnection();
+                httpKoneksi.setRequestMethod("POST");
+                httpKoneksi.setDoOutput(true);
+                httpKoneksi.setDoInput(true);
+                OutputStream outputStream = httpKoneksi.getOutputStream();
+                BufferedWriter bufferedWriter = new BufferedWriter(new OutputStreamWriter(outputStream, "UTF-8"));
+                String post_data = URLEncoder.encode("username","UTF-8")+"="+URLEncoder.encode(username,"UTF-8") + "&"
+                        +URLEncoder.encode("password","UTF-8")+"="+URLEncoder.encode(password,"UTF-8");
+                bufferedWriter.write(post_data);
+                bufferedWriter.flush();
+                bufferedWriter.close();
+                outputStream.close();
+                InputStream inputStream = httpKoneksi.getInputStream();
+                BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream,"iso-8859-1"));
+                String result= "";
+                String line = "";
+                while ((line = bufferedReader.readLine())!=null){
+                    result += line;
+                }
+                bufferedReader.close();
+                inputStream.close();
+                httpKoneksi.disconnect();
+                return result;
+
+            }
+            catch (MalformedURLException e) {
+                e.printStackTrace();
+            }
+            catch (IOException e){
+                e.printStackTrace();
+            }
         }
         return null;
     }
 
     @Override
     protected void onPreExecute() {
-        super.onPreExecute();
+        alertDialog = new AlertDialog.Builder(context).create();
+        alertDialog.setTitle("Login Status");
     }
 
     @Override
-    protected void onPostExecute(Void aVoid) {
-        super.onPostExecute(aVoid);
+    protected void onPostExecute(String result) {
+        alertDialog.setMessage(result);
+        alertDialog.show();
     }
 
     @Override

@@ -60,9 +60,9 @@
             android:textSize="16dp"
             android:layout_height="wrap_content" />
         <Button
+            android:id="@+id/btnLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="Login"
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:background="#4B8D7F"
