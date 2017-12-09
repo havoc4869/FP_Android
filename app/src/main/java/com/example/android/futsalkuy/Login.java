@@ -27,5 +27,8 @@ public class Login extends AppCompatActivity {
     public void Login(){
         String username = txtUsername.getText().toString();
         String password = txtPassword.getText().toString();
+        String type = "login";
+        BackgroundWorker bw = new BackgroundWorker(this);
+        bw.execute(type, username, password);
     }
 }
