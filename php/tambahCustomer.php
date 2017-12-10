@@ -10,7 +10,7 @@
 	if($_SERVER['REQUEST_METHOD']=='POST'){
 		
 		//Mendapatkan Nilai Variable
-		$name = $_POST['email'];
+		$email = $_POST['email'];
 		$name = $_POST['name'];
 		$password = $_POST['password'];
 		

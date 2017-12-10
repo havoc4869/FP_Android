@@ -20,11 +20,8 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
 
     //Dibawah ini merupakan perintah untuk mendefinikan View
     private EditText editTextName;
-    private EditText editTextDesg;
-    private EditText editTextSal;
 
     private Button buttonAdd;
-    private Button buttonView;
     private EditText editTextEmail, editTextPassword, editTextHp, editTextGender, editTextAddres, editTextIdNumber;
 
     @Override
@@ -69,7 +66,7 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
             protected void onPostExecute(String s) {
                 super.onPostExecute(s);
                 loading.dismiss();
-                Toast.makeText(Register.this,s,Toast.LENGTH_LONG).show();
+                Toast.makeText(Register.this,""+name+" "+email+" "+password,Toast.LENGTH_LONG).show();
             }
 
             @Override
@@ -93,10 +90,10 @@ public class Register extends AppCompatActivity implements View.OnClickListener{
     public void onClick(View v) {
         if(v == buttonAdd){
             addEmployee();
+            Intent i = new Intent(this, MainMenu.class);
+            startActivity(i);
         }
 
-        if(v == buttonView){
-            startActivity(new Intent(this,Login.class));
-        }
+
     }
 }

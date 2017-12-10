@@ -11,7 +11,7 @@ public class konfigurasi {
     //Pada tutorial Kali ini, karena kita membuat localhost maka alamatnya tertuju ke IP komputer
     //dimana File PHP tersebut berada
     //PENTING! JANGAN LUPA GANTI IP SESUAI DENGAN IP KOMPUTER DIMANA DATA PHP BERADA
-    public static final String URL_ADD="http://192.168.100.16/S5/FutsalKuy/php/tambahCustomer.php";
+    public static final String URL_ADD="http://localhost:81/S5/FutsalKuy/php/tambahCustomer.php";
     public static final String URL_GET_LOGIN="http://192.168.100.16/S5/FutsalKuy/php/tampilAdmin.php";
 
     public static final String URL_GET_ALL = "http://192.168.100.16/S5/FutsalKuy/php/tampilSemuaPgw.php";
