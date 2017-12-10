@@ -14,7 +14,7 @@ import java.sql.SQLException;
 
 public class ConnectionClass {
     String Classs = "com.mysql.jdbc.Driver";
-    String url = "jdbc:mysql://localhost:3306/futsalkuy";
+    String url = "jdbc:mysql://192.168.100.16/futsalkuy";
     String un = "root";
     String password = "";
 
@@ -26,8 +26,8 @@ public class ConnectionClass {
         String ConnURL = null;
         try {
             Class.forName(Classs);
+
             conn = DriverManager.getConnection(url, un, password);
-            conn = DriverManager.getConnection(ConnURL);
         } catch (ClassNotFoundException e) {
             e.printStackTrace();
         } catch (SQLException e) {

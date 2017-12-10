@@ -28,6 +28,13 @@ public class Login extends AppCompatActivity {
         buttonLogin = (Button) findViewById(R.id.btnLogin);
         connectionClass = new ConnectionClass();
 
+   // public void MyLogin(View view){
+    //    String username = txtUsername.getText().toString();
+    //    String password = txtPassword.getText().toString();
+    //    String type = "login";
+    //    BackgroundWorker bw = new BackgroundWorker(this);
+     //   bw.execute(type,username,password);}
+
         buttonLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
